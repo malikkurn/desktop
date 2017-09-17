@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+	<menu execute="/usr/libexec/openbox-xdg-menu applications" id="applications-menu" label="Applications"/>
+	<menu execute="/usr/libexec/openbox-xdg-menu preferences" id="preferences-menu" label="Preferences"/>
+	<menu execute="/usr/libexec/openbox-xdg-menu system-settings" id="administration-menu" label="Administration"/>
+	<menu execute="/usr/libexec/openbox-xdg-menu /etc/xdg/openbox/terminals" id="terminals-menu" label="Terminals"/>
+	<menu id="root-menu" label="Openbox 3">
+		<separator label="  Korora 25  "/>
+		<item label="Run Command">
+			<action name="Execute">
+				<execute>gmrun</execute>
+			</action>
+		</item>
+		<item label="File Manager">
+			<action name="Execute">
+				<execute>thunar</execute>
+			</action>
+		</item>
+		<item label="Web Browser">
+			<action name="Execute">
+				<execute>palemoon</execute>
+			</action>
+		</item>
+		<item icon="/home/lol/.icons/Super\ Flat\ Remix/apps/scalable/audacious.svg" label="Music Player">
+			<action name="Execute">
+				<execute>audacious</execute>
+			</action>
+		</item>
+		<separator/>
+		<menu id="applications-menu"/>
+		<menu id="preferences-menu"/>
+		<menu id="administration-menu"/>
+		<separator/>
+		<menu id="terminals-menu"/>
+		<item label="ObConf">
+			<action name="Execute">
+				<execute>obconf</execute>
+			</action>
+		</item>
+		<item label="ObMenu">
+			<action name="Execute">
+				<execute>obmenu</execute>
+			</action>
+		</item>
+		<item label="Appearance">
+			<action name="Execute">
+				<execute>lxappearance</execute>
+			</action>
+		</item>
+		<separator/>
+		<item label="Reconfigure">
+			<action name="Reconfigure"/>
+		</item>
+		<item label="Log Out">
+			<action name="SessionLogout">
+				<prompt>yes</prompt>
+			</action>
+		</item>
+	</menu>
+</openbox_menu>

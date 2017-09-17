@@ -1,0 +1,30 @@
+# Programs that will run after Openbox has started
+
+# Run a Composite manager
+#xcompmgr -c -t-5 -l-5 -r4.2 -o.55 &
+compton --config ~/.config/compton.conf &
+
+# SCIM support (for typing non-english characters)
+scim -d &
+
+#sound applet
+pnmixer &
+
+#Wallpaper
+feh --bg-fill ~/Pictures/wp/maroon-wallpaper-HD7.jpg &
+
+# A panel for good times
+tint2 &
+
+#background
+thunar --daemon &
+
+#display
+xrandr --output LVDS --mode 1366x768 --rate 60 &
+xrandr --output VGA-0 --off
+
+#conky
+conky -c /home/lol/.config/conky.rc &
+
+#cpupower set as powersave
+#sudo cpupower frequency-set --governor powersave

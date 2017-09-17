@@ -1,0 +1,21 @@
+# Programs that will run after Openbox has started
+
+# Run a Composite manager
+#xcompmgr -c -t-5 -l-5 -r4.2 -o.55 &
+#compton --config ~/.config/compton.conf &
+xcompmgr -c -t-5 -l-5 -r4.2 -o.55 &
+
+# SCIM support (for typing non-english characters)
+scim -d &
+
+#Wallpaper
+#cvlc --video-wallpaper --no-audio --loop --no-video-title-show ~/Downloads/clockwork.wmv &
+
+# A panel for good times
+tint2 &
+
+#background
+thunar --daemon &
+
+#display
+xrandr --output LVDS --mode 1366x768 --rate 60 &
